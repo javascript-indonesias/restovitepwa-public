@@ -1,0 +1,117 @@
+.hero-jumbotron {
+    height: 30em;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+        url('../public/images/header-hero-large.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    width: 100%;
+    /* max-width: 1200px; */
+    justify-content: center;
+    align-items: center;
+    border-radius: 1px;
+}
+
+@media screen and (max-width: 1200px) {
+    .hero-image {
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+}
+
+.hero-image .hero-text-desc {
+    color: #fff;
+    text-align: center;
+}
+
+.hero-image .hero-text-desc h1 {
+    font-size: 30pt;
+    font-weight: 600;
+    line-height: 20px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.hero-image .hero-text-desc p {
+    font-size: 14pt;
+    font-weight: 700;
+    line-height: 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-jumbotron {
+        height: 25em;
+    }
+
+    .hero-image .hero-text-desc h1 {
+        margin-left: 10px;
+        margin-right: 10px;
+        line-height: 42px;
+    }
+
+    .hero-image .hero-text-desc p {
+        margin-left: 10px;
+        margin-right: 10px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 728px) {
+    .hero-image {
+        background-image: linear-gradient(
+                rgba(0, 0, 0, 0.4),
+                rgba(0, 0, 0, 0.3)
+            ),
+            url('../public/images/header-hero-small.jpg');
+    }
+}
+
+.hero-image .hero-button {
+    background: #f94144;
+    color: #fff;
+    padding: 13px 44px 13px 44px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13pt;
+    display: inline-block;
+    border: none;
+}
+
+.fav-button {
+    background: #f94144;
+    color: #fff;
+    padding: 13px 18px 13px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 13pt;
+    margin: 0 0 0 8px;
+    display: inline-block;
+    border: none;
+}
+
+.hero-image .hero-button:hover,
+.fav-button:hover {
+    background: #df776a;
+}
+
+.carousel-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.hide-fav-icon {
+    display: none;
+}
+
+.show-fav-icon {
+    display: block;
+}

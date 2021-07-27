@@ -1,0 +1,19 @@
+### LIST RESTO
+
+GET https://restaurant-api.dicoding.dev/list
+
+### DETAIL RESTORAN
+
+# GET https://restaurant-api.dicoding.dev/detail/:id
+GET https://restaurant-api.dicoding.dev/detail/s1knt6za9kkfw1e867
+
+### KIRIM REVIEW
+POST https://restaurant-api.dicoding.dev/review
+Content-Type: application/json
+X-Auth-Token: 12345
+
+{
+    "id" : "w9pga3s2tubkfw1e867",
+    "name" : "Nama pengguna",
+    "review" : "Review pengguna tes"
+}

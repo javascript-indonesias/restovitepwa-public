@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Daftar restoran enak di seluruh Indonesia"
+        />
+        <title>Resto Vite</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"
+            integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
+            crossorigin="anonymous"
+        />
+
+        <!-- PWA Manifest generator -->
+        <!-- https://app-manifest.firebaseapp.com/ -->
+        <!-- <link rel="manifest" href="./manifest.json" /> -->
+        <link rel="apple-touch-icon" href="./images/apple-icon_192x192.png" />
+        <meta name="theme-color" content="#f55c47" />
+    </head>
+    <body>
+        <a href="#" class="skip-content" tabindex="0">Lompat ke Konten</a>
+        <!-- Navigation Bar -->
+        <header>
+            <a href="#/beranda" class="header-logo" tabindex="0">RestoVite</a>
+            <div class="row-toggle">
+                <button
+                    class="toggle-menus"
+                    tabindex="0"
+                    aria-label="Tombol menu"
+                ></button>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="#/beranda" tabindex="0" class="active"
+                            >Beranda</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#/favorite" tabindex="0">Favorit</a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://github.com/GulajavaMinistudio"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="0"
+                            >Tentang Kami</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <div class="clearfix"></div>
+        </header>
+        <main class="content"></main>
+        <div class="loading-container">
+            <div id="progress">
+                <div class="lds-ring">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="text-loader">Memuat Data...</div>
+            </div>
+        </div>
+        <div class="toast-container">
+            <div id="toasts">Toast text message...</div>
+        </div>
+        <footer class="footer">
+            <h3 tabindex="0">Copyright &copy; 2021 - Resto Vite</h3>
+        </footer>
+    </body>
+    <noscript
+        >Aktifkan JavaScript di browser anda agar aplikasi berjalan
+        lancar</noscript
+    >
+</html>

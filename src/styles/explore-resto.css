@@ -1,0 +1,216 @@
+.subheader-title {
+    text-align: center;
+    margin: 32px 0 24px 0;
+}
+
+.subheader-title h1 {
+    line-height: 8px;
+    font-weight: 600;
+    font-family: 'Lato', Helvetica, sans-serif;
+}
+
+.subheader-title hr {
+    width: 100px;
+    border: 2px solid #ccc;
+}
+
+.explore-resto {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px 0;
+}
+
+/* Center CSS Grid */
+/* https://coryrylan.com/blog/how-to-center-in-css-with-css-grid */
+.list-resto {
+    margin: 0 0 1em 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 18px;
+    row-gap: 14px;
+    justify-content: center;
+    align-content: center;
+    grid-auto-flow: unset;
+}
+
+@media screen and (max-width: 1100px) {
+    .list-resto {
+        margin: 0 0 1em 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 18px;
+        row-gap: 14px;
+        justify-content: center;
+        align-content: center;
+        grid-auto-flow: unset;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .list-resto {
+        margin: 0 15px 1em 15px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 18px;
+        row-gap: 14px;
+        justify-content: center;
+        align-content: center;
+        grid-auto-flow: unset;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .list-resto {
+        margin: 0 15px 1em 15px;
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 18px;
+        row-gap: 18px;
+        justify-content: center;
+        align-content: center;
+        grid-auto-flow: unset;
+    }
+
+    .subheader-title h1 {
+        line-height: 32px;
+        font-weight: 600;
+        font-family: 'Lato', Helvetica, sans-serif;
+    }
+}
+
+.card {
+    display: grid;
+    max-width: 250px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 210px 200px 70px;
+    grid-template-areas: 'image-card' 'desc-card' 'rating-card';
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+@media screen and (max-width: 1100px) {
+    .card {
+        display: grid;
+        max-width: 280px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .card {
+        display: grid;
+        max-width: 400px;
+        grid-template-rows: 220px 210px 70px;
+    }
+}
+
+.image-covers {
+    grid-area: 'image-covers';
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.image-covers img {
+    height: 210px;
+    max-width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+@media screen and (max-width: 620px) {
+    .image-covers img {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.desc-card {
+    grid-area: 'desc-card';
+    margin: 25px;
+}
+
+.desc-card .city-name {
+    color: #f94144;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* https://stackoverflow.com/questions/26973570/setting-a-max-character-length-in-css/26975271 */
+.desc-card p {
+    color: #868686;
+    font-size: 11pt;
+    font-weight: 300;
+    margin-top: 2px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.desc-card h2 {
+    margin: 0;
+    font-size: 16pt;
+    color: #293241;
+}
+
+.desc-card h2 a {
+    text-decoration: none;
+    color: #293241;
+    padding: 20px 0 20px 0;
+}
+
+@media screen and (max-width: 620px) {
+    .desc-card h2 {
+        margin: 20px 0 0 8px;
+        font-size: 15pt;
+    }
+}
+
+.rating-card-red {
+    grid-area: 'rating-card';
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #f15946;
+}
+
+.rating-card-green {
+    grid-area: 'rating-card';
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #00b06f;
+}
+
+.rating-card-red,
+.rating-card-green .stat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    color: #fff;
+}
+
+.type-rating {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.value-rating {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+}

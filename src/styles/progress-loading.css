@@ -1,0 +1,126 @@
+.loading-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#progress {
+    visibility: hidden;
+    display: none;
+    min-width: 170px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: 600;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    bottom: 60px;
+    font-size: 17px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#progress.show-progress {
+    visibility: visible;
+    -webkit-animation: fadein-progress 0.5s;
+    animation: fadein-progress 0.5s;
+}
+
+#progress.hide-progress {
+    visibility: visible;
+    -webkit-animation: fadeout-progress 0.5s 2.5s;
+    animation: fadeout-progress 0.5s 2.5s;
+}
+
+#progress .text-loader {
+    color: #424242;
+    margin: 0 0 0 8px;
+}
+
+@-webkit-keyframes fadein-progress {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 60px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein-progress {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 60px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout-progress {
+    from {
+        bottom: 60px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout-progress {
+    from {
+        bottom: 60px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    margin: 6px;
+    border: 5px solid #f57f17;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #f57f17 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

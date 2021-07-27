@@ -1,0 +1,188 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #f2f2f2;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.skip-content {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #f4743b;
+    color: white;
+    font-weight: 600;
+    padding: 8px;
+    z-index: 100;
+    text-decoration: none;
+}
+
+.skip-content:focus {
+    top: 0;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+/* https://css-tricks.com/couple-takes-sticky-footer/ */
+.footer {
+    flex-shrink: 0;
+    background-color: #f94144;
+    text-align: center;
+}
+
+.footer h3 {
+    color: #fff;
+    line-height: 10px;
+    font-size: 12pt;
+}
+
+header {
+    position: relative;
+    margin: 20px 15px 20px 15px;
+    padding: 10px;
+    background: #fff;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 auto;
+}
+
+.header-logo {
+    color: #ef233c;
+    height: 55px;
+    font-size: 32px;
+    line-height: 50px;
+    padding: 6px 20px 0 20px;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: 'Lato', Helvetica, sans-serif;
+}
+
+.clearfix {
+    clear: both;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4px;
+    width: 100%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    margin: 8px 0;
+    padding: 14px 20px 14px 20px;
+    text-decoration: none;
+    color: #393e46;
+    font-weight: 600;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    background: #f94144;
+    color: #fff;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+
+.toggle-menus {
+    display: none;
+    border: none;
+    background: transparent;
+}
+
+@media screen and (max-width: 1200px) {
+    header {
+        margin: 20px;
+    }
+}
+
+/* https://stackoverflow.com/questions/8794778/how-do-you-align-left-right-a-div-without-using-float/8794883 */
+@media screen and (max-width: 768px) {
+    header {
+        max-width: 1200px;
+        margin: 20px 15px;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 3fr auto;
+    }
+
+    .clearfix {
+        display: none;
+    }
+
+    .header-logo {
+        padding: 2px 20px 0 20px;
+        text-align: left;
+    }
+
+    .row-toggle {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .toggle-menus {
+        display: block;
+        width: 45px;
+        height: 45px;
+        margin: 10px 20px 10px 10px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 28px;
+        color: #f55c47;
+        border: none;
+        background: transparent;
+    }
+
+    .toggle-menus::before {
+        content: '\f0c9';
+        font-family: 'fontAwesome';
+        padding: 20px 20px;
+    }
+
+    .toggle-menus.active::before {
+        content: '\f00d';
+        transition: 0.5s;
+        padding: 20px 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+        width: 100%;
+    }
+
+    nav.active ul {
+        display: block;
+    }
+
+    nav.active ul li a {
+        display: block;
+        margin: 0;
+    }
+}
